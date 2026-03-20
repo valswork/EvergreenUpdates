@@ -1,6 +1,6 @@
 # 🌲 EvergreenUpdates
 
-A simple desktop tool that scans websites for news articles and compiles them into a CSV. Built for policy teams who need to monitor large numbers of stakeholder sites without manual checking.
+A simple desktop tool enabled by AI that scans websites for news articles and compiles them into a CSV. Built for policy teams who need to monitor large numbers of stakeholder sites without manual checking.
 
 ## What It Does
 
