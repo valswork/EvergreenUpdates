@@ -9,6 +9,7 @@ Enter a list of URLs and the tool will scan each one for news articles, collecti
 ## Requirements
 
 To use this tool you will need:
+- Python 3.10 or newer
 - A **Google API key** (see [Getting an API Key](#getting-an-api-key) below)
 - A **PEM certificate file** (for secure connections to your organization's network, see [Contact](#contact) for support if you work for NRCan)
 
@@ -21,12 +22,22 @@ To use this tool you will need:
 4. Click Run - your CSV will be saved to the same folder as the executable
 
 ### Option 2: Run the Python Script
-1. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) if you don't have it
-2. Clone this repository
-3. Set up the environment:
+1. Clone this repository
+2. Create and activate a virtual environment:
+
+   Windows
    ```bash
-   conda env create -f environment.yml
-   conda activate evergreen_updates
+   python -m venv .venv
+   .venv\Scripts\Activate.ps1
+   ```
+   macOS / Linux
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
+3. Install dependencies
+   ```bash
+   pip install -r requirements.txt
    ```
 4. Run the script:
    ```bash
@@ -48,10 +59,12 @@ The tool produces a CSV file named **`news_results.csv`** by default — you can
 | Column | Description |
 |---|---|
 | title | Article headline |
-| url | Direct URL to the article |
+| url | URL to the article |
 | published_date | Date the article was published |
 | retrieved_on | Date the tool found the article |
 | source_url | The website URL you provided |
+
+As with all AI generated content, please be aware that the results may be inaccurate. 
 
 ## Notes
 - URLs should be entered one per line in the text box
@@ -59,4 +72,4 @@ The tool produces a CSV file named **`news_results.csv`** by default — you can
 - Your API key and certificate path are never saved or transmitted
 
 ## Contact
-valerie.gies@nrcan-rncan.gc.ca
+Valerie Gies @ valerie.gies@nrcan-rncan.gc.ca
